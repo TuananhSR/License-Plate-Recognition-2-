@@ -1,0 +1,83 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+.section {
+    margin-bottom: 20px;
+}
+
+.camera-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around; /* Căn giữa các phần tử trong camera container */
+}
+
+.camera {
+    flex: 1;
+    margin: 0 10px; /* Để lại khoảng cách 10px giữa camera và action buttons */
+    position: relative; /* Để có thể căn giữa canvas và hình ảnh */
+}
+
+.image-preview {
+    flex: 1;
+    text-align: center;
+}
+
+video, img.captured-image {
+    margin-top: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    display: block;
+    max-width: 100%;
+}
+
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.action-buttons {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+input[type=text] {
+    padding: 10px;
+    margin-right: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    margin-right: 10px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+}
+
+p.success {
+    margin-top: 10px;
+    font-weight: bold;
+    color: green; /* Màu chữ xanh khi thành công */
+}
+
+p.error {
+    margin-top: 10px;
+    font-weight: bold;
+    color: red; /* Màu chữ đỏ khi thất bại */
+}
+
+@media (max-width: 768px) {
+    video, img.captured-image {
+        width: 100%;
+        height: auto;
+    }
+}

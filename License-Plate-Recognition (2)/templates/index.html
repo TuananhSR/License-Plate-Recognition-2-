@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parking Lot License Plate Recognition</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <h1>Parking Lot License Plate Recognition</h1>
+    <div class="section">
+        <h2>Check In</h2>
+        <div class="camera-container">
+            <div class="action-buttons">
+                <input type="text" id="check_in_id" placeholder="Enter ID">
+                <button onclick="startCamera('check_in_video')">Start Camera</button>
+                <button onclick="stopCamera('check_in_video')">Stop Camera</button> 
+                <button onclick="captureImage('check_in')">Capture License Plate</button>
+                <p id="check_in_message"></p>
+            </div>
+            <div class="camera">
+                <video id="check_in_video" width="640" height="480" autoplay></video>
+                <canvas id="check_in_canvas" width="640" height="480" style="display:none;"></canvas>
+                <img id="check_in_image" class="captured-image">
+            </div>
+        </div>
+    </div>
+    <div class="section">
+        <h2>Check Out</h2>
+        <div class="camera-container">
+            <div class="action-buttons">
+                <input type="text" id="check_out_id" placeholder="Enter ID">
+                <button onclick="startCamera('check_out_video')">Start Camera</button>
+                <button onclick="stopCamera('check_out_video')">Stop Camera</button>
+                <button onclick="captureImage('check_out')">Capture License Plate</button>
+                <p id="check_out_message"></p>
+            </div>
+            <div class="camera">
+                <video id="check_out_video" width="640" height="480" autoplay></video>
+                <canvas id="check_out_canvas" width="640" height="480" style="display:none;"></canvas>
+                <img id="check_out_image" class="captured-image">
+            </div>
+        </div>
+    </div>
+    <script src="/static/js/script.js"></script>
+</body>
+</html>
